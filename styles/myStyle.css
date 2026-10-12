@@ -1,0 +1,125 @@
+﻿body {
+    background-color: #fdfbf7;
+    font-family: Arial, sans-serif;
+    direction: rtl;
+    text-align: right;
+    padding: 10px;
+    margin: 0;
+}
+
+#container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.box {
+    background-color: #333;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    width: 280px;
+    box-sizing: border-box;
+}
+
+.box h3 {
+    margin-top: 0;
+    border-bottom: 1px solid #555;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.content-section {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 12px 20px;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.content-section h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.dest-images-container {
+    position: relative;
+    width: 180px;
+    height: 110px;
+}
+
+.dest-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    display: none;
+}
+
+.dest-img.show {
+    display: block;
+}
+
+.addon-img {
+    width: 90px;
+    height: 90px;
+    opacity: 0.4;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    object-fit: cover;
+}
+
+
+input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    margin-top: 3px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 13px;
+    width: 100%;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+}
+
+label {
+    font-size: 13px;
+}

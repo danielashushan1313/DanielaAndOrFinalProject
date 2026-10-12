@@ -1,0 +1,79 @@
+﻿<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <title>הרכבת טיול החלומות</title>
+    <link href="styles/myStyle.css" rel="stylesheet" />
+    <script src="jscripts/JavaScript.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="container">
+    <h1>הרכבת טיול החלומות שלך</h1>
+
+    <div class="main-container">
+
+      
+        <div class="box">
+            <h3>פרטים אישיים</h3>
+            <label for="userName">שם מלא (חובה):</label>
+            <input type="text" id="userName" placeholder="הקש את שמך..." oninput="checkForm()">
+
+            <label for="userNotes">הערות לטיול:</label>
+            <input type="text" id="userNotes" placeholder="בקשות מיוחדות...">
+
+            <button id="sendBtn" onclick="submitTour()" disabled>שלח הזמנה לטיול</button>
+        </div>
+
+        <!--  יעד הטיול  -->
+        <div class="box">
+            <h3>* יעד הטיול (חובה)</h3>
+            <label><input type="radio" name="destination" onclick="chooseDest('imgAmerica', 'אמריקה')"> אמריקה</label><br>
+            <label><input type="radio" name="destination" onclick="chooseDest('imgEurope', 'אירופה')"> אירופה</label><br>
+            <label><input type="radio" name="destination" onclick="chooseDest('imgJapan', 'יפן')"> יפן</label><br>
+            <label><input type="radio" name="destination" onclick="chooseDest('imgThailand', 'תאילנד')"> תאילנד</label>
+        </div>
+
+        <!--  שדרוגים  -->
+        <div class="box">
+            <h3>שדרוגים ואטרקציות</h3>
+            <label><input type="checkbox" id="chkCulinary" onchange="changeOpacity('chkCulinary', 'imgCulinary')"> סיור קולינרי בשוק</label><br>
+            <label><input type="checkbox" id="chkHotel" onchange="changeOpacity('chkHotel', 'imgHotel')"> שדרוג למלון 5 כוכבים</label><br>
+            <label><input type="checkbox" id="chkCar" onchange="changeOpacity('chkCar', 'imgCar')"> הוספת רכב שכור צמוד</label>
+        </div>
+
+    </div>
+
+   
+    <div class="content-section">
+        <h3>הטיול שלי | <span style="font-weight: normal; font-size: 15px;">יעד נבחר: <strong id="selectedDestText">טרם נבחר יעד</strong></span></h3>
+
+        <div style="display: flex; gap: 20px; align-items: center; justify-content: space-between;">
+            <!-- תמונת היעד -->
+            <div class="dest-images-container" style="margin-top: 0;">
+                <img id="imgAmerica" src="Images/america.jpg" alt="אמריקה" class="dest-img">
+                <img id="imgEurope" src="Images/europe.jpg" alt="אירופה" class="dest-img">
+                <img id="imgJapan" src="Images/japan.jpeg" alt="יפן" class="dest-img">
+                <img id="imgThailand" src="Images/tailand.jpg" alt="תאילנד" class="dest-img">
+            </div>
+
+            <!-- תמונות השדרוגים שסומנו -->
+            <div>
+                <p style="margin: 0 0 5px 0; font-size: 14px;"><strong>שדרוגים שסומנו:</strong></p>
+                <div style="display: flex; gap: 5px;">
+                    <img id="imgCulinary" src="Images/culinaryTour.jpg" alt="קולינרי" class="addon-img" title="סיור קולינרי">
+                    <img id="imgHotel" src="Images/5starHotel.jpg" alt="מלון" class="addon-img" title="מלון 5 כוכבים">
+                    <img id="imgCar" src="Images/car.jpg" alt="רכב" class="addon-img" title="רכב צמוד">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- אזור הסיכום -->
+    <div id="summaryBox" style="display: none; margin-top: 10px; background: #eef2f3; padding: 10px; border-radius: 5px;">
+        <h3>סיכום הזמנת הטיול:</h3>
+        <p id="summaryText"></p>
+    </div>
+
+</div>
+</body>
+</html>
